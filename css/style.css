@@ -1,0 +1,276 @@
+li {
+  list-style: none;
+  padding: 1em;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+.container .home-menu {
+  width: 30%;
+  height: 1000px;
+  background-color: #607D8B;
+}
+.container .home-menu .home-menu-ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+.container .home-menu .home-menu-ul a {
+  color: white;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+.container .home-menu .home-menu-ul a:hover {
+  color: #00ACC1;
+}
+
+.container-list {
+  display: grid;
+  grid-template-columns: 80%;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.addItems-container {
+  background: #4D7EA8;
+}
+
+.addItems-container, .displayItems-container {
+  margin: 1rem 0;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  border: 2px solid #272932;
+  box-shadow: 0 5px 10px #272932;
+}
+
+.addItems-title, .displayItems-title {
+  text-transform: capitalize;
+}
+
+.addItems-title {
+  color: #B6C2D9;
+}
+
+.addItems-action, .displayItems-action {
+  border: 2px solid #272932;
+  padding: 0.5rem 0;
+  text-transform: capitalize;
+  border-radius: 0.5rem;
+  display: none;
+}
+
+.addItems-input {
+  background: transparent;
+  border: none;
+  border-bottom: 5px solid #9E90A2;
+  width: 100%;
+  font-size: 2rem;
+  padding: 0.5rem;
+  color: #9E90A2;
+  outline: none;
+  text-transform: uppercase;
+}
+
+.addItems-submit, .displayItems-clear {
+  display: block;
+  width: 80%;
+  margin: 2rem auto 0 auto;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  text-transform: capitalize;
+  outline: none;
+}
+
+.addItems-submit {
+  color: #B6C2D9;
+  background: transparent;
+  border: 3px solid #B6C2D9;
+  transition: all 2s ease;
+}
+
+.addItems-submit:hover {
+  background: #B6C2D9;
+  color: #272932;
+}
+
+.displayItems-container {
+  background: #B6C2D9;
+}
+
+.displayItems-title {
+  color: #4D7EA8;
+  margin-bottom: 0.25rem;
+}
+
+.grocery-item {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  align-items: center;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  transition: all 1s ease;
+  margin: 0.5rem 0;
+}
+
+.grocery-item:hover {
+  background: #828489;
+}
+
+.grocery-item__title {
+  text-align: left;
+  margin-left: 0.5rem;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  color: #272932;
+}
+
+.grocery-item__link {
+  color: red;
+  transition: all 2s linear;
+}
+
+.grocery-item:hover .grocery-item__link {
+  transform: scale(2);
+}
+
+.displayItems-clear {
+  color: #4D7EA8;
+  background: transparent;
+  border: 3px solid #4D7EA8;
+  transition: all 2s ease;
+}
+
+.displayItems-clear:hover {
+  background: #4D7EA8;
+  color: #272932;
+}
+
+/* action classes */
+.alert {
+  color: red;
+  border-color: red;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.success {
+  color: green;
+  border-color: green;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    grid-template-columns: 50%;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: montserrat;
+  box-sizing: border-box;
+}
+
+.container-login {
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(120deg, #3498db, #8e44ad);
+}
+
+.login-form {
+  width: 360px;
+  height: 580px;
+  background: #f1f1f1;
+  padding: 80px 40px;
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.txtb {
+  border-bottom: 2px solid #adadad;
+  position: relative;
+  margin: 30px 0;
+}
+
+.txtb input {
+  font-size: 15px;
+  color: #333;
+  border: none;
+  width: 100%;
+  outline: none;
+  background: none;
+  padding: 0 5px;
+  height: 40px;
+}
+
+.txtb span::before {
+  content: attr(data-placeholder);
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #adadad;
+  transform: translateY(-50%);
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.txtb span::after {
+  top: 100%;
+  left: 0;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-image: linear-gradient(120deg, #3498db, #8e44ad);
+  transition: 0.5s;
+}
+
+.focus + span::before {
+  top: -5px;
+}
+
+.focus + span::after {
+  width: 100%;
+}
+
+.logbtn {
+  display: block;
+  width: 100%;
+  height: 50px;
+  border: none;
+  background-image: linear-gradient(120deg, #3498db, #8e44ad);
+  background-size: 200%;
+  color: white;
+  outline: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.logbtn:hover {
+  background-position: right;
+}
+
+.bottom-text {
+  margin-top: 60px;
+  text-align: center;
+  font-size: 13px;
+}
+
+/*# sourceMappingURL=style.css.map */
