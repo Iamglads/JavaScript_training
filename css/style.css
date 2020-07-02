@@ -34,30 +34,30 @@ li {
   grid-template-columns: 80%;
   justify-content: center;
   margin-top: 3rem;
+  color: white;
 }
 
 .addItems-container {
-  background: #4D7EA8;
+  background: #00897b;
 }
 
-.addItems-container, .displayItems-container {
+.addItems-container,
+.displayItems-container {
   margin: 1rem 0;
   padding: 2rem;
   border-radius: 0.5rem;
   text-align: center;
-  border: 2px solid #272932;
+  border: 1px solid white;
   box-shadow: 0 5px 10px #272932;
 }
 
-.addItems-title, .displayItems-title {
+.addItems-title,
+.displayItems-title {
   text-transform: capitalize;
 }
 
-.addItems-title {
-  color: #B6C2D9;
-}
-
-.addItems-action, .displayItems-action {
+.addItems-action,
+.displayItems-action {
   border: 2px solid #272932;
   padding: 0.5rem 0;
   text-transform: capitalize;
@@ -67,20 +67,19 @@ li {
 
 .addItems-input {
   background: transparent;
-  border: none;
-  border-bottom: 5px solid #9E90A2;
+  border: 1px solid white;
   width: 100%;
-  font-size: 2rem;
-  padding: 0.5rem;
-  color: #9E90A2;
+  font-size: 1.5rem;
+  padding: 0.5em;
+  color: white;
   outline: none;
-  text-transform: uppercase;
 }
 
-.addItems-submit, .displayItems-clear {
+.addItems-submit,
+.displayItems-clear {
   display: block;
-  width: 80%;
-  margin: 2rem auto 0 auto;
+  width: 100%;
+  margin: 1rem auto 0 auto;
   font-size: 1.5rem;
   border-radius: 0.5rem;
   cursor: pointer;
@@ -89,23 +88,22 @@ li {
 }
 
 .addItems-submit {
-  color: #B6C2D9;
+  color: white;
   background: transparent;
-  border: 3px solid #B6C2D9;
+  border: 1px solid white;
   transition: all 2s ease;
 }
-
 .addItems-submit:hover {
-  background: #B6C2D9;
+  background: #b6c2d9;
   color: #272932;
 }
 
 .displayItems-container {
-  background: #B6C2D9;
+  background: white;
 }
 
 .displayItems-title {
-  color: #4D7EA8;
+  color: #00897b;
   margin-bottom: 0.25rem;
 }
 
@@ -117,10 +115,6 @@ li {
   padding: 0.5rem;
   transition: all 1s ease;
   margin: 0.5rem 0;
-}
-
-.grocery-item:hover {
-  background: #828489;
 }
 
 .grocery-item__title {
@@ -141,14 +135,14 @@ li {
 }
 
 .displayItems-clear {
-  color: #4D7EA8;
+  color: #00897b;
   background: transparent;
-  border: 3px solid #4D7EA8;
+  border: 1px solid #00897b;
   transition: all 2s ease;
 }
 
 .displayItems-clear:hover {
-  background: #4D7EA8;
+  background: #4d7ea8;
   color: #272932;
 }
 
