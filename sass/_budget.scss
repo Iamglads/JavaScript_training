@@ -1,0 +1,143 @@
+
+
+.container-budget{
+    display: flex;
+}
+h1{
+    font-size: 1.8rem;
+    color: bisque;
+}
+
+.container__budget{
+    width: 30%;
+    height: 800px;
+    background-color: #00ACC1;
+    padding: 2rem;
+}
+
+
+.btn-budget{
+    font-size: 1rem;
+    margin: 1rem auto;
+    padding: 0.5rem 1rem;
+    color: white;
+    background-color: #6cc3d8;
+    border-radius: 8px;
+    border: none;
+
+}
+
+button:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+input[type=text], [type=number]{
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    border: 3px solid #88d5e9;
+    outline: none;
+}
+
+input[type=number]:focus{
+    box-shadow:  0 0 10px #88d5e9;
+}
+
+
+
+.budgetDetails{
+    width: 70%;
+    height: 800px;
+    display: block;
+    justify-content: center;
+    background-color: #B2EBF2;
+    padding: 2rem;
+    margin: auto;
+}
+
+.budgetDetails--div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    text-align: center;
+}
+
+
+h5{
+    color: grey;
+    font-size: 1rem;
+}
+
+h6{
+    color: grey;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+
+.expense-list{
+    display: block;
+}
+
+.expense-list-div{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    border-bottom: 2px solid grey;
+}
+
+.budget-feedback,
+.expense-feedback {
+  display: none;
+}
+
+.expense{
+    display: flex;
+}
+.showItem {
+    display: block;
+    color: red;
+  }
+
+  .showRed {
+    color: red;
+  }
+  .showGreen {
+    color: green;
+  }
+  .showBlack {
+    color: black;
+  }
+
+  @media(max-width: 600px){
+    .container{
+        display: block;
+    }
+
+    .container__budget{
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .budgetDetails{
+        width: 100%;
+        height: 700px;
+        display: block;
+        justify-content: center;
+        background-color: #B2EBF2;
+        padding: 1rem;
+    }
+
+    .budgetDetails--div{
+        display: block;
+        text-align: center;
+    }
+
+    .expense-list{
+        display: block;
+    }
+  }

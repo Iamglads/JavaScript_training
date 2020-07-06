@@ -201,7 +201,7 @@ h1 {
   margin: 30px 0;
 }
 
-.txtb input {
+.txtb .input-login {
   font-size: 15px;
   color: #333;
   border: none;
@@ -265,9 +265,95 @@ h1 {
   font-size: 13px;
 }
 
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
 body {
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #BF360C;
+}
+
+.container {
+  width: 500px;
+  height: 500px;
+  display: grid;
+  background-color: #E64A19;
+  grid-gap: 5px;
+  grid-template-columns: 33% 33% 33%;
+  grid-auto-rows: 33% 33% 33%;
+}
+
+.card {
+  cursor: pointer;
+  background-color: #BF360C;
+  position: relative;
+}
+
+.card::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 8rem;
+}
+
+.card.x::before {
+  content: "X";
+}
+
+.card.x::before {
+  content: "O";
+}
+
+.winner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 400px;
+  height: 200px;
+  padding: 20px 40px;
+  background-color: white;
+  font-size: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  animation: 0.5s linear;
+}
+
+@keyframes animate {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.winner button {
+  margin-top: 20px;
+  width: 80px;
+  height: 35px;
+  line-height: 35px;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  border-radius: 20px;
+  cursor: pointer;
+  color: white;
+  background-color: #BF360C;
 }
 
 .container-budget {
@@ -286,7 +372,7 @@ h1 {
   padding: 2rem;
 }
 
-button {
+.btn-budget {
   font-size: 1rem;
   margin: 1rem auto;
   padding: 0.5rem 1rem;
@@ -409,19 +495,6 @@ h6 {
     display: block;
   }
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .calculator {
   flex: 0 0 95%;
 }
@@ -485,6 +558,77 @@ button:hover {
   width: 100%;
   padding: 1em;
   border: 2px solid red;
+}
+
+h1 {
+  color: black;
+}
+
+.search-wikipedia {
+  width: 100%;
+  background: transparent;
+  border: 2px solid #5D4037;
+  font-size: 3rem;
+  margin: 1rem 0;
+  padding: 0.5rem 0;
+  color: #5D4037;
+  text-transform: uppercase;
+  outline: none;
+}
+
+.btn {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  font-size: 2rem;
+  border-radius: 0.25rem;
+  text-transform: capitalize;
+  background: transparent;
+  border: 2px solid #5D4037;
+  transition: all 0.3s linear;
+}
+
+.wait-icon {
+  display: none;
+  margin: 1rem auto;
+}
+
+.show {
+  display: block;
+}
+
+.search-item {
+  text-align: left;
+  list-style-type: none;
+  border: 0.05rem solid var(--darkGreen);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+}
+
+.search-item__title {
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+}
+
+.search-item__text {
+  margin: 0.5rem 0;
+  letter-spacing: 0.3rem;
+}
+
+.search-item__link {
+  text-decoration: none;
+  color: var(--brown);
+  font-size: 1.2rem;
+  transition: all 0.2s ease-in-out;
+}
+
+@media screen and (min-width: 992px) {
+  .results {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

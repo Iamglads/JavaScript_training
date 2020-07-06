@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Application calcul budget</title>
+</head>
+
+<body>
+    <div class="container-budget">
+        <section class="container__budget">
+            <!-- budget feedback -->
+            <div class="yourBudget">
+                <h1 class="text-uppercase">Calculez votre budget</h1>
+                <!-- budget form -->
+                <form id="budget-form" class="budget-form">
+                    <div>
+                        <div class="budget-feedback"></div>
+                        <h5>Entrez votre budget</h5>
+                        <input type="number" id="budget-input" placeholder="3000">
+                    </div>
+                    <!-- submit button -->
+                    <button type="submit" class="btn-budget budget-submit" id="budget-submit">Ajouter</button>
+                </form>
+            </div>
+            <div class="yourExpense">
+                <!-- expense form -->
+                <form id="expense-form" class=" expense-form">
+                    <div>
+                        <div class="expense-feedback"></div>
+                        <h5>Votre dépense</h5>
+                        <input type="text" class=" expense-input" id="expense-input" placeholder="Ex: Crédit auto">
+                        <h5>Entrez le montant</h5>
+                        <input type="number" class=" expense-input" id="amount-input" placeholder="331">
+                    </div>
+                    <!-- submit button -->
+                    <button type="submit" class="btn-budget expense-submit" id="expense-submit">Ajouter</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="budgetDetails">
+            <!-- app info -->
+            <div class="budgetDetails--div">
+                <div>
+                    <h6 class="info-title">budget</h6>
+                    <span class="budget-icon"><i class="fas fa-euro-sign"></i></span>
+                    <h4 class=" mt-2 budget" id="budget"><span>€ </span><span id="budget-amount">0</span></h4>
+                </div>
+                <div>
+                    <h6 class="t info-title">Dépenses</h6>
+                    <span class="expense-icon"><i class="far fa-credit-card"></i></span>
+                    <h4 class=" mt-2 expense" id="expense"><span>€ </span><span id="expense-amount">0</span></h4>
+                </div>
+                <div>
+                    <h6 class="info-title">Solde</h6>
+                    <span class="balance-icon"><i class="fas fa-dollar-sign"></i></span>
+                    <h4 class=" mt-2 balance" id="balance"> <span>€ </span><span id="balance-amount">0</span></h4>
+                </div>
+            </div>
+
+            <div class="expense-list" id="expense-list">
+                <div class="expense-list-div">
+                    <h5 class="list-item">Intitulé</h5>
+                    <h5 class="list-item">Montant</h5>
+                    <h5 class="list-item"></h5>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- script js -->
+    <script src="budget.js"></script>
+</body>
+
+</html>
