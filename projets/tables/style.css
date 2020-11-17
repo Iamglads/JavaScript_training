@@ -1,0 +1,51 @@
+
+body{
+    background: #ecf0f1;
+    margin: 0 auto;
+    padding: 0px;
+    text-align: center;
+}
+
+main {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.bloc-table{
+    width: 300px;
+    height: auto;
+    min-height: 300px;
+    background: #16a085;
+    padding: 2em;
+    border-radius: 10px;
+    color: #fff;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.6em;
+    border-radius: 10px;
+    border: none;
+    margin-top: 10px;
+}
+
+input:focus-visible{
+    border: none;
+}
+
+.btn{
+    padding: .5em;
+    width: 40%;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover{
+    color: #FFF;
+    background-color: #0f2924;
+}

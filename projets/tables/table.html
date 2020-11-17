@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main>
+        <div class="bloc-table">
+            <h1>Les Tables</h1>
+            <form>
+                <div>
+                    <label for="">Rentrez un nombre!</label>
+                    <input type="text" placeholder="Exemple: 5" class="inputNumber">
+                </div>
+                <hr />
+                <div>
+                    <label for="">Choisir le calcul à faire</label>
+                    <br />
+                    <select id="select">
+                        <option value="*">Multiplication</option>
+                        <option value="+">Addition</option>
+                    </select>
+                </div>
+                
+                <button class="btn">Entrer</button>
+
+                <div class="displayResult">
+               <!--Affichage des tables ou des erreurs-->
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="index.js"></script>
+    
+</body>
+</html>
