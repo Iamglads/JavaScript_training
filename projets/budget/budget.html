@@ -18,20 +18,22 @@
                         <h1 class="text-uppercase">Calculez votre budget</h1>
                         <form id="budget-form" class="budget-form">
                             <div>
-                                <label>Entrez votre budget</label>
-                                <input type="number" id="budget-input" placeholder="Ex: 3000">
+                                <input type="number" id="budget-input" placeholder="Rentrez votre budget!">
                             </div>
                             <div>
-                                <div class="expense-feedback"></div>
-                                    <label>Intitulé de la dépense</label>
-                                    <input type="text" class=" expense-input" id="expense-input" placeholder="Ex: Crédit auto">
-                                </div>
-                                <div>
-                                   <label>Entrez le montant</label>
-                                    <input type="number" class=" expense-input" id="amount-input" placeholder="Ex: 331"> 
-                                </div>
+                                <label>Intitulé de la dépense</label>
+                                <input type="text" class=" expense-input" id="expense-name" placeholder="Ex: Crédit auto">
+                            </div>
+                            <div>
+                                <label>Entrez le montant</label>
+                                <input type="number" class=" expense-input" id="amount-input" placeholder="Ex: 331"> 
+                            </div>
                             <button type="submit" class="btn-budget expense-submit" id="expense-submit">Ajouter</button>
                         </form>
+
+                        <div class="feedback">
+                            <!-- display errors-->
+                        </div>
                     </div>
                 </div>  
             </section>
@@ -42,22 +44,22 @@
                     <div>
                         <h6 class="info-title">budget</h6>
                         <p class=" mt-2 budget" id="budget">
-                            <span>€ </span>
                             <span id="budget-amount">0</span>
+                            <span>€ </span>
                         </p>
                     </div>
                     <div>
                         <h6 class="t info-title">Dépenses</h6>
                         <p class=" mt-2 expense" id="expense">
-                            <span>€ </span>
                             <span id="expense-amount">0</span>
+                            <span>€ </span>
                         </p>
                     </div>
                     <div>
                         <h6 class="info-title">Solde</h6>
                         <p class=" mt-2 balance" id="balance"> 
-                            <span>€ </span>
                             <span id="balance-amount">0</span>
+                            <span>€ </span>
                         </p>
                     </div>
                 </div>
@@ -65,6 +67,9 @@
                         <h5 class="list-item">Intitulé</h5>
                         <h5 class="list-item">Montant</h5>
                         <h5 class="list-item"> Supprimé</h5>
+                    </div>
+                    <div class="display-list">
+
                     </div>
             </section>
         </main>
