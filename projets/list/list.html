@@ -2,36 +2,42 @@
 <html lang="fr">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>List</title>
-  <link rel="stylesheet" href="/css/style.css">
-  <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js"
-    integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a"
-    crossorigin="anonymous"></script>
-
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>List</title>
+	<link rel="stylesheet" href="./list.css">
+	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js"
+		integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a"
+		crossorigin="anonymous">
+	</script>
+	<link
+	rel="stylesheet"
+	href="../../fontawesome-free-5.12.0-web/css/all.min.css"
+  />
 </head>
 
 <body>
-      <main class="container-list">
-        <div class="addItems-container">
-          <h2 class="addItems-title">AJOUTER DES ARTICLES</h2>
-          <form>
-            <input type="text" name="" id="" class="addItems-input" placeholder="Ex: Citron">
-            <button type="submit" class="addItems-submit">Ajouter</button>
-          </form>
-          <div class="displayItems-container">
-            <h2 class="displayItems-title">Liste des produits</h2>
-            <div class="grocery-list">
-
-            </div>
-            <button type="submit" class="displayItems-clear">Effacer</button>
-          </div>
-        </div>
-
-      </main>
-
+    <main>
+		<div class="container">
+			<h2 class="title">Todo Liste</h2>
+			<form>
+				<input type="text" class="input-task" placeholder="Ex: Prendre rdv chez le medecin">
+				<button type="submit" class="submit">Ajouter</button>
+			</form>
+			<div class="feedback">
+				<!-- feedback here-->
+			</div>
+			<div class="task-list">
+				<h2 class="title">Liste des tâches</h2>
+				<div class="list">
+					<!-- JavaScript-->
+				</div>
+				<button type="submit" class="clear">Effacer</button>
+			</div>
+			<a href="./list-source-code.html" class="link-source"> Code source</a>
+		</div>
+    </main>
   <script src="list.js"></script>
 </body>
 
