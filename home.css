@@ -1,5 +1,6 @@
 * {
-  margin: auto;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .container {
@@ -7,20 +8,36 @@
   height: 100%;
   display: flex;
   justify-content: center;
-  min-height: 90vh;
   text-align: center;
+}
+
+header {
+  width: 100%;
+  min-height: 500px;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("./bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
 }
 
 .container__wrappe {
   width: 1200px;
   max-width: 1200px;
+  padding-top: 3em;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 h1 {
-  color: grey;
-  margin-top: 30px;
+  font-size: 50px;
 }
 .home-menu {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,10 +50,9 @@ h1 {
 }
 
 li {
-  width: 100%;
   list-style: none;
   padding: 1em;
-  margin: 20px;
+  margin-bottom: 20px;
   border: 1px solid #607d8b;
   border-radius: 5px;
   cursor: pointer;
