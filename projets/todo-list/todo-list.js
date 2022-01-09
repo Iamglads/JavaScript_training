@@ -20,26 +20,31 @@ class List {
   _add() {
     let task = this.enterTask.value;
     const id = new Date().getTime().toString();
+    const feedback = document.querySelector(".feedback");
 
     if (task == "") {
-      task.value = " Le champs est vide";
+      feedback.innerHTML = "Veuillez rentrer une tâche!";
+      feedback.style.color = "red";
     } else {
-      // add this task in storage
       this.addInStorage(id, task);
-      const taskList = this._getStorage();
-      console.log(taskList);
-      taskList.map((item) => {
-        this.displayList.innerHTML = `<article class="list-item" data-id="${item.id}>
-          <p class="title">${item.value}</p>
-          <di class"btn-actions">
-              <!-- Modifier la tâche -->
-              <i class="fas fa-edit"></i>
-              <!-- supprimer la tâche -->
-              <i class="fas fa-trash"></i>
-          </di>
-        </article>`;
-      });
+      this.displayTasks();
     }
+  }
+
+  displayTasks() {
+    let taskList = this._getStorage();
+    //console.log(taskList);
+    taskList.forEach((item) => {
+      this.displayList.innerHTML += `<article class="list-item" data-id="${item.id}>
+        <p class="title">${item.value}</p>
+        <di class"btn-actions">
+            <!-- Modifier la tâche -->
+            <i class="fas fa-edit"></i>
+            <!-- supprimer la tâche -->
+            <i class="fas fa-trash"></i>
+        </di>
+      </article>`;
+    });
   }
 
   addInStorage(id, value) {
@@ -72,7 +77,7 @@ class List {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("test");
+  //console.log("test");
   const init = new List();
   init.init();
 });
