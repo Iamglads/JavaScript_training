@@ -4,24 +4,24 @@ const btns = document.querySelectorAll(".btn");
 
 btns.forEach((btn) =>
   btn.addEventListener("click", (e) => {
-    const styles = e.currentTarget.classList;
-    if (styles.contains("up")) {
-      count--;
-    } else if (styles.contains("down")) {
-      count++;
+    const current = e.currentTarget.classList;
+    if (current.contains("down")) {
+      compteur--;
+    } else if (current.contains("up")) {
+      compteur++;
     } else {
-      count = 0;
+      compteur = 0;
     }
 
-    if (count > 0) {
+    if (compteur > 0) {
       value.style.color = "green";
     }
-    if (count < 0) {
+    if (compteur < 0) {
       value.style.color = "red";
     }
-    if (count === 0) {
+    if (compteur === 0) {
       value.style.color = "#222";
     }
-    value.textContent = count;
+    value.textContent = compteur;
   })
 );
