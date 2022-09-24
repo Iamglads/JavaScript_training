@@ -1,5 +1,6 @@
 // modal form
 const formSubmit = document.querySelector(".form-submit");
+const successBox = document.querySelector(".success-box");
 
 class ValidateForm {
   constructor() {
@@ -177,24 +178,30 @@ class ValidateForm {
       termsAccepted: true,
       nextEvent: this.nextEventMethod(),
     };
-    console.log(datas);
+
+    const { firstname, lastname, email, birthdate, quantity, city } = datas;
 
     // envoyer le message dans la modal et cacher le formulaire
-    const successMessage = document.querySelector(".successMessage");
-    const boxMessage = document.querySelector(".susses-message");
-    const message = `Merci ${this.firstname.value} ${this.lastname.value}! Votre réservation a été reçue!`;
-
-    successMessage.textContent = message;
-    successMessage.style.fontSize = "40px";
-    successMessage.style.textAlign = "center";
+    const boxMessage = document.querySelector(".success-box");
     formSubmit.style.display = "none";
     boxMessage.style.display = "block";
+    boxMessage.innerHTML = `
+    <p>Boujour ${firstname}</p>
+    <h2>Votre message a été envoyé !</h2>
+    <ul>
+        <li> Nom : <span>${firstname}</span></li>
+        <li> Prénom : <span>${lastname}</span></li>
+        <li> Courriel : <span>${email}</span></li>
+        <li> Date de naissance : <span>${birthdate}</span></li>
+        <li> Nombre tournoi : <span>${quantity}</span></li>
+        <li> Ville : <span>${city}</span></li>
+    </ul>
+`;
   }
 }
 
 formSubmit.addEventListener("submit", (e) => {
   const validate = new ValidateForm();
-  console.log("Submit");
   e.preventDefault();
   validate.checkInputs();
 });
